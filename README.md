@@ -14,7 +14,7 @@ pipx install copier
 Now, run copier to generate your project:
 
 ```bash
-copier copy gh:ManasviGoyal/kaitai_awkward_runtime <pkg>
+copier copy gh:agoose77/kaitai_awkward_runtime <pkg>
 ```
 
 (`<pkg>` is the path to put the new project)
