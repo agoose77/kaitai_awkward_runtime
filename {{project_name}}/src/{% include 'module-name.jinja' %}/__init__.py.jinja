@@ -1,0 +1,14 @@
+"""
+Copyright (c) 2023 Manasvi. All rights reserved.
+
+kaitai_awkward_runtime: Kaitai Struct: runtime for Awkward Arrays
+"""
+from __future__ import annotations
+
+__all__ = ("__version__",)
+
+
+from .lib.awkward_{{ schema_name.replace(".ksy", "") }} import *
+
+
+__version__ = "{{ version }}"

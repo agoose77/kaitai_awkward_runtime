@@ -1,33 +1,32 @@
-# kaitai_awkward_runtime
+# Awkward Array Kaitai Cookiecutter
 
-Building Awkward Arrays using Kaitai binary file descriptors.
+A [copier][] template for building Python packages from Kaitai Struct `.ksy`
 
-Steps for reproducing the environment:
 
-1. Clone `kaitai_awkward_runtime` repository:
-```
-git clone --recursive https://github.com/ManasviGoyal/kaitai_awkward_runtime.git
-```
+## To use
 
-2. Change directory to `kaitai_awkward_runtime`:
-```
-cd kaitai_awkward_runtime
-```
-<!--- if we want to set up the package_name as ksy name we can just skip the PACKAGE_NAME argument -->
+Install `copier`. Using [pipx][], that's:
 
-3. Install the library, and open Python:
-```
-pip install .    
-python
+```bash
+pipx install copier
 ```
 
-4. Print the returned `ak.Array`:
-```python
-import awkward_animal
-awkward_array = awkward_animal.load("data/animal.raw")
-print(awkward_array)
+Now, run copier to generate your project:
+
+```bash
+copier copy gh:agoose77/kaitai_awkward_runtime <pkg>
 ```
 
+(`<pkg>` is the path to put the new project)
 
-> **Info**
-> `kaitai_awkward_runtime` depends upon `sbt`, and `gtest` dependencies.
+You will get a nice CLI experience with answer validation. You will also get a
+`.copier-answers.yml` file, which will allow you to perform updates in the
+future.
+
+> Note: Add `--vcs-ref=HEAD` to get the latest version instead of the last
+> tagged version.
+
+
+
+[copier]: https://copier.readthedocs.io
+[pipx]: https://pypa.github.io/pipx/
